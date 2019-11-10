@@ -1,0 +1,64 @@
+{{loginModel.value|json}}
+{{contactinfo|json}} 
+
+<br><br><div class="container">
+    <div class="row">
+        <h3><b>Feel Free To Contact Us...</b></h3>
+    </div>
+    <br><br>
+<div class="row">
+    <div class="col-md-6">
+        <form [formGroup]="loginModel" novalidate>
+        <h3>Lets us write code for you...</h3>
+        <h6 style="text-align: justify">Thanks for you interest in Assimilate Technologies! We look forward to learning about what you are working on. Drop us a line and someone from our team will get in touch with you. 24 hours!</h6>
+    <br><div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control col-md-12" formControlName="name">
+        <div class= "alert alert-danger" *ngIf="loginModel.get('name').hasError('required') && loginModel.get('name').touched">This field is mandatory.</div> 
+        <label for="email">Email:</label>
+        <input type="text" class="form-control col-md-12" formControlName="email">
+        <div class= "alert alert-danger" *ngIf="loginModel.get('email').hasError('required') && loginModel.get('email').touched">This field is mandatory.</div> 
+        <label for="phone">Mobile No.:</label>
+        <input type="text" class="form-control col-md-12" formControlName="phone">
+        <div class= "alert alert-danger" *ngIf="loginModel.get('phone').hasError('required') && loginModel.get('phone').touched">This field is mandatory.</div> 
+        <label for="comment">Comment:</label>
+        <input type="text" style="height: 100px" class="form-control col-md-12 input-lg" formControlName="comment">
+        <div class= "alert alert-danger" *ngIf="loginModel.get('comment').hasError('required') && loginModel.get('comment').touched">This field is mandatory.</div> 
+        <br>
+        <div class="form-group">
+        <button type="submit" style="margin-right: 16px" name="submit" class="btn btn-secondary" (click)="LoginUser(loginModel.value)" >Submit</button>
+        
+        <button type="reset" name="Reset" class="btn btn-secondary">Reset</button>
+    </div>
+    </div>
+</form>
+</div>
+<div class="col-md-2"></div>
+<div class="col-md-4">
+    <div class="row">
+        <div class="jumbotron">
+        <h2>Address</h2>
+        <h6 style="color: grey">Office No- 102, First Floor, Above Bank Of Baroda, Kate Bangar Park, Krishna Chowk, New Sangavi, Pune, Maharashtra 411027</h6>
+    </div> 
+</div>
+<div class="row">
+    <div class="container" style="background-color: lightslategrey">
+    
+    <br>
+    <h2>Call Us</h2><br>
+    <h6>+91-(702)-059-5590</h6>
+    <br>
+</div>
+</div>
+<br>
+<div class="row">
+    <div class="container" style="background-color: rgb(121, 118, 145)" > 
+        <br>
+        <h2>Email Us</h2><br>
+        <h6>info@assimilatetechnologies.com</h6>
+        <br>
+    </div>
+    </div>
+</div>
+<br><br>
+</div>

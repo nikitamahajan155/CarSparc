@@ -1,0 +1,41 @@
+<br><br><br><br><br><h1 [ngStyle]="myStyle" >{{title}}</h1>
+<h1  [ngStyle]="style1">{{title}}</h1>
+
+
+
+
+  <table>
+        <tr>
+            <th>Name</th>
+            <th>Roll No.</th>
+            <th>City</th>
+        </tr>
+        <tr *ngFor= 'let n of student'>
+            <td>{{n.name}}</td>
+            <td>{{n.RollNo}}</td>
+            <td>{{n.City}}</td>
+        </tr>
+    </table> 
+<hr><br>
+    <div>
+        <ul *ngFor= "let s of name">
+                <li>{{s}}</li>
+        </ul>
+    </div>
+
+   <input type="text" [hidden]="ishide" class="form-control col-sm-6"> <!--hide data-->
+
+   <h1 [ngStyle]="myStyle">{{title}}</h1>
+   <button type="submit" (click)="handleclick()">Hit</button>
+   <h1 [hidden]="ishide">{{title}}</h1>
+  <button type="submit" (click)="toggle()">Toggle</button>
+
+  <!--Structural Directive demo-->
+  <div *ngIf ="ishidden">
+      <h3>Structural Directive</h3>
+    </div>
+   <button type="submit" (click)="toggle2">Toggle2</button>
+
+
+
+

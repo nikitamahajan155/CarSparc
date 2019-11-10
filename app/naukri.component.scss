@@ -1,0 +1,65 @@
+.navbar{
+    color: black;
+    
+}
+.navbar .navbar-nav{
+    align-content: center;
+}
+.topnav {
+    position: relative;
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+Label {
+text-align: right;
+clear:left;
+float: left;
+margin-right: 15px;
+}
+label{
+color:rgb(66, 62, 62);
+font-family: Arial;
+Font-size: 11;
+}
+sup{
+    color: red;
+    size: 50px;
+}
+.space-left{
+    padding-left: 200px
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: green;
+    cursor: inherit;
+    display: block;
+}
+h6
+{
+    color:rgb(27, 14, 216)
+}
+h5{
+    color:gray
+}
+h3{
+    background-color: #333;
+    text-align: center;
+}
