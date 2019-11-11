@@ -1,0 +1,19 @@
+{{name | json}}
+
+<h1><u>{{name}}</u></h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>City</th>
+    </tr>
+    <tr *ngFor= "let s of student">
+        <td>{{s.name}}</td>
+        <td>{{s.city}}</td>
+    </tr>
+</table>
+
+<button type="submit" (click)="MyStudentInfo()">Hit</button>
+<br><br>
+<input type="text" [(ngModel)]="name" class="form-control col-md-6" > 
+
+<label for=

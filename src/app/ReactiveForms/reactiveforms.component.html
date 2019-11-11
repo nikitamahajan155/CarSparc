@@ -1,0 +1,130 @@
+<h2>{{title}}</h2>
+
+{{loginModel.value|json}}
+<!-- <div class="container">
+<div class="jumbotron">
+
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+        <h1 style="text-align: center"><b>Student Information</b></h1>
+    </div>
+</div>
+<div class="row">
+        <div class="col-md-4"></div>
+    <form [formGroup]="loginModel" novalidate>
+        
+           
+        <div class="form-group">
+            <label for="Name">Name</label>
+            <input type="text" class="form-control col-md-12" formControlName="name" >
+        </div>
+        <div class="col-md-12">
+        <div class="alert alert-danger" *ngIf="loginModel.controls['name'].hasError('required') && loginModel.controls['name'].touched">name is required.</div>
+        </div>
+        <div class="form-group">
+                <label for="Standard">Standard</label>
+                <input type="text" class="form-control col-md-12" formControlName="standard">
+            </div>
+            
+                <div class="col-md-12">
+        <div class="alert alert-danger" *ngIf="loginModel.controls['standard'].hasError('required') && loginModel.controls['standard'].touched">Standard is required.</div>
+   </div>
+        <div formGroupName="address">
+            <div class="form-group">
+                    <label for="address" >Address</label>
+            </div>
+           
+                    <label for="country">Country:</label>
+                      <input type="text" class="form-control col-md-12" formControlName="country">
+                      <label for="city">City:</label>
+                      <input type="text" class="form-control col-md-12" formControlName="city">
+                      <label for="Street">Street No.:</label>
+                      <input type="text" class="form-control col-md-12" formControlName="street">
+
+                    </div>
+                
+                          <button type="submit" name="submit" class="btn btn-primary" (click)="LoginUser(loginModel.value)" style="margin: 80px">Submit</button>
+                          <button type="reset" name="reset" class="btn btn-primary" (click)="LoginUser(loginModel.value)" style="margin: 80px">Reset</button>
+                       
+
+
+
+                  
+     
+</form>
+</div>
+</div>
+</div> -->
+
+
+
+<div class="container">
+    <div class="jumbotron">
+        <h2 style="text-align: center"><u>Student Information</u></h2>
+         
+        <form [formGroup]="loginModel" novalidate>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+            <div class="form-group">
+                <label for="name">First Name</label>
+                <input type="text" class="form-control col-md-12" formControlName="FirstName">
+               
+                <div class="alert alert-danger" *ngIf="loginModel.controls['FirstName'].hasError('required') && loginModel.controls['FirstName'].touched">This field is mandatory.
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="name"> Last Name</label>
+                <input type="text" class="form-control col-md-12" formControlName="LastName">
+              
+                <div class="alert alert-danger" *ngIf="loginModel.controls['LastName'].hasError('required') && loginModel.controls['LastName'].touched">This field is mandatory.
+                </div>
+                </div>
+            </div>
+        
+    </div>
+
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <label for="standard">Standard</label>
+            <input type="text" class="form-control" formControlName="standard">
+          
+            <div class="alert alert-danger" *ngIf="loginModel.controls['standard'].hasError('required') && loginModel.controls['standard'].touched">This field is mandatory</div>
+        </div>
+       
+    </div>
+    <br>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+    <div formGroupName="address">
+            <!-- <div class="form-group"> -->
+                    <label for="address" >Address</label>
+            <!-- </div> -->
+           <br>
+                    <label for="country">Country:</label>
+                      <input type="text" class="form-control col-md-12" formControlName="country">
+                      <div class= "alert alert-danger" *ngIf="loginModel.get('address').get('country').hasError('required') && loginModel.get('address').get('country').touched">This field is mandatory.</div>                      
+                    <label for="city">City:</label>
+                      <input type="text" class="form-control col-md-12" formControlName="city">
+                      <div class= "alert alert-danger" *ngIf="loginModel.get('address').get('city').hasError('required') && loginModel.get('address').get('city').touched">This field is mandatory.</div>                      
+                      <label for="Street">Area</label>
+                      <input type="text" class="form-control col-md-12" formControlName="Area">
+                      <div class= "alert alert-danger" *ngIf="loginModel.get('address').get('Area').hasError('required') && loginModel.get('address').get('Area').touched">This field is mandatory.</div>                      
+
+
+                    </div><br>
+<button type="button" name="submit" class="btn btn-primary" (click)="LoginUser(loginModel.value)">Submit</button>
+<button type="reset" name="reset" class="btn btn-secondary" (click)="LoginUser(loginModel.value)">Reset</button>
+</div>
+</div>
+
+</form>
+</div>
+ 
+</div>

@@ -1,0 +1,28 @@
+{{UserInfo | json}}
+<br>
+<hr>
+<table>
+    <tr *ngIf=UserInfo.data>
+        <th>ID</th>
+        <th>Email</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Photo</th>
+    </tr>
+    <tr *ngFor="let s of UserInfo.data">
+        <td>{{s.id}}</td>
+        <td>{{s.email}}</td>
+        <td>{{s.first_name}}</td>
+        <td>{{s.last_name}}</td>                   
+        <td><img src="{{s.avatar}}"></td>
+        
+    </tr>
+</table>
+
+<button type="submit" class="btn btn-info" (click)="GetInfo()">User Information</button>
+
+<br><br>
+
+{{UserInfo|json}}
+
+<button type= "submit" class=" btn btn-secondary" (click)= "InsertData()"> Insert Data </button>

@@ -1,0 +1,15 @@
+
+<div class="container">
+<h1>Parent component</h1>
+org Name= {{orgName}}
+{{childData|json}}
+<!-- {{childData}} -->
+<br>
+<button type="submit" (click)="getViewChildinfo()" class="btn btn-info">Get ViewChild</button>
+<hr>
+
+<child-comp [myOrgName]="orgName" (sendData)="receiveInfo($event)"></child-comp>
+
+<hr>
+<viewchild-comp></viewchild-comp>
+</div>

@@ -1,0 +1,19 @@
+
+                    <label>Enter first value :</label>
+                    <input type="number" [(ngModel)]='A' name="A">  <br/><br>
+
+                    <label>Enter second value :</label>
+                    <input type="number" [(ngModel)]='B' name="B"> <br/><br>
+
+<div class="row">
+<div class="form-group">
+    <button type="submit" class="btn btn-lg" (click)="Addition()">ADDITION</button>
+<button type="submit" class="btn btn-lg" (click)="Substraction()">SUBSTRACTION</button>
+<button type="submit" class="btn btn-lg" (click)="Multiplication()">MULTIPLICATION</button>
+<button type="submit" class="btn btn-lg" (click)="Division()">DIVISION</button>
+</div>
+</div>
+<br>
+
+<h3>RESULT= {{res}} </h3>
+   

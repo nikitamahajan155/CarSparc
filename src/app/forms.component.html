@@ -1,0 +1,139 @@
+
+<div class="row">
+    <div class="col-md-10">
+        <img src="../../assets/Images/naukri_Logo.png" width="150" height="75">
+    </div>
+    <div class="col-md-2">
+        <br>
+        <span>Alredy User? </span>
+        <span><a href="https://www.naukri.com/nlogin/login">Login</a></span>
+        <span> here!</span>
+    </div>
+</div>
+
+
+<form #loginModel="ngForm" (ngSubmit)="loginUser(loginModel.value)">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-expand bg-dark navbar-dark justify-content-center">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://my.naukri.com/account/register/basicdetails"
+                            target="_self">Fresher</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://my.naukri.com/account/register/basicdetails"
+                            target="_self">Proffessional</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</form>
+
+
+<div class="container-fluid">
+<br>
+<div class="row">
+    <div class="col-md-3">
+
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="Name" class="col-md-3" style="float: left">Name:</label>
+            <input type="text" placeholder="Enter your full name" #name="ngModel" class="form-control col-md-9"
+                [(ngModel)]="Name" required>
+        </div>
+        <div class="alert alert-danger" *ngIf="name.invalid && (name.dirty || name.touched)">
+            Name is required.
+        </div>
+
+        <div class="form-group">
+            <label for="Email" class="col-md-3" style="float: left">Email ID:</label>
+            <input type="text" placeholder="Enter your active Email ID to receive relevant jobs" #email="ngModel"
+                class="form-control col-md-9" [(ngModel)]="Email" required
+                pattern="^\w+[\w-\.]*\@\w+((-\w+)|(\w*))\.[a-z]{2,3}$">
+
+            <div class="alert alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+                Please specify your valid Email ID.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Password" class="col-md-3" style="float: left">Create Password:</label>
+            <input type="Password" placeholder="Minimum 6 Characters" #password="ngModel" class="form-control col-md-9"
+                [(ngModel)]="Password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,8}$">
+
+            <div class="alert alert-danger" *ngIf="password.invalid && (password.dirty || password.touched)">
+                Password matching expression. Password must be at least 4 characters, no more than 8 characters, and
+                must include at least one upper case letter, one lower case letter, and one numeric digit.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Number" class="col-md-3" style="float: left">Mobile No.:</label>
+            <input type="number" placeholder="Where recruiter can contact you" #number="ngModel"
+                class="form-control col-md-9" [(ngModel)]="Number" required pattern="^((\+)?(\d{2}[-]))?(\d{10}){1}?$">
+
+            <div class="alert alert-danger" *ngIf="number.invalid && (number.dirty || number.touched)">
+                Please specify your mobile number.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Location" class="col-md-3" style="float: left">Current location:</label>
+            <select class="form-control col-md-9" placeholder="If your city is not in the list, select others"
+                #location="ngModel" [(ngModel)]="Location" required>
+                <option value="Select">Select</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Gurgaon">Gurgaon</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Noida">Noida</option>
+                <option value="Pune">Pune</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+
+            </div>
+
+            <div class="col-md-9">
+                <input type="text" [hidden]="ishide" class="form-control col-sm-12"
+                    placeholder="Enter your city name here">
+            </div>
+       
+
+        </div>
+        <span class="space-left"><input type="checkbox" id="myCheck" (click)="handleclick()"> : Outside
+            India</span>
+        
+    </div>
+</div>
+<div class="row">
+
+    <div class="col-md-3">
+    </div>
+
+    <div class="col-md-6">
+        <label for="number" class="col-sm-3">Upload Resume</label>
+        <span class="btn btn-success">
+            Uplaod Resume
+        </span>
+    </div>
+
+
+</div>
+
+
+        
